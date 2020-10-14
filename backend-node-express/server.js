@@ -7,11 +7,11 @@ const app = express();
 const db = require("./app/models");
 db.sequelize.sync();
 
-var corsOptions = {
-  origin: "http://localhost:8081"
-};
+// var corsOptions = {
+//   origin: "http://localhost:8081"
+// };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
@@ -34,7 +34,7 @@ app.get("/", (req, res) => {
 require("./app/routes/api/quotation.routes.js")(app);
 
 // set port, listen for requests
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3100;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
