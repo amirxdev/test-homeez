@@ -17,16 +17,24 @@ Homeez Sample Project
 server.js
 package.json
 package-lock.json
-app
-    config
+- app
+    - config
         db.config.js
-    controllers
-        api
+    - controllers
+        - api
             quotation.ctrl.js
-    models
+    - models
         index.js
         quotation.model.js
-    routes
-        api
+    - routes
+        - api
             quotation.routes.js
+```
+
+# Run the project:
+## For the backend
+```
+cd backend-node-express
+npm install
+node server.js
 ```
