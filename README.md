@@ -42,5 +42,7 @@ node server.js
 ## AWS Backend
 ```
 You try the API with thie endpoint:
-http://ec2-54-169-152-77.ap-southeast-1.compute.amazonaws.com:3100/api/quotations
+http://ec2-54-169-152-77.ap-southeast-1.compute.amazonaws.com:3100/api/quotations/
+or
+http://54.169.152.77:3100/api/quotations/
 ```
