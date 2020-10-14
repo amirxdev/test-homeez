@@ -19,7 +19,6 @@ app.use(bodyParser.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
 // // In development, we may need to drop existing tables and re-sync database.
 // db.sequelize.sync({ force: true }).then(() => {
 //     console.log("Drop and re-sync db.");
