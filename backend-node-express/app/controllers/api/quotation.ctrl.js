@@ -4,29 +4,28 @@ const Op = db.Sequelize.Op;
 
 // Create and Save a new Quotation
 exports.create = (req, res) => {
-  // Validate request
-  if (!req.body.quotation_info) {
-    res.status(400).send({
-      message: "Info can not be empty!"
-    });
-    return;
-  }
+    // Validate request
+    if (!req.body.quotation_info) {
+        res.status(400).send({
+            message: "Info can not be empty!"
+        });
+        return;
+    }
 
-  // Create a Quotation
-  const quotation = {
-    quotation_info: req.body.quotation_info,
-  };
+    // Create a Quotation
+    const quotation = {
+        quotation_info: req.body.quotation_info,
+    };
 
-  // Save quotation in the database
-  Quotation.create(quotation)
+    // Save quotation in the database
+    Quotation.create(quotation)
     .then(data => {
-      res.send(data);
+        res.send(data);
     })
     .catch(err => {
-      res.status(500).send({
-        message:
-          err.message || "Some error occurred while creating the Quotation."
-      });
+        res.status(500).send({
+            message: err.message || "Some error occurred while creating the Quotation."
+        });
     });
 };
 
