@@ -39,6 +39,7 @@ npm install
 node server.js
 ```
 
+# AWS Free tier
 ## AWS Backend
 ```
 You try the API with thie endpoint:
